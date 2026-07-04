@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STM32 I2S Quickstart — embedlab.dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="../../assets/css/guide.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="logo-bracket">[</span>embedlab<span class="logo-dot">.</span>dev<span class="logo-bracket">]</span>
+        </a>
+        <nav class="header-nav">
+          <a href="/#guides">← All guides</a>
+          <a href="/about.html#consulting" class="nav-cta">Consulting</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="guide-hero">
+      <div class="container">
+        <div class="guide-breadcrumb">
+          <a href="/">embedlab.dev</a> <span>/</span> <a href="/#guides">guides</a> <span>/</span> i2s-quickstart
+        </div>
+        <div class="guide-tag-large">Audio · STM32F411</div>
+        <h1 class="guide-hero-title">STM32 I2S Quickstart</h1>
+        <p class="guide-hero-sub">
+          Wire up CS5343 ADC + CS4334 DAC, configure I2S3 with double-buffer DMA,
+          and get clean audio in/out on STM32F411CEU6 — based on a real completed project.
+        </p>
+        <div class="guide-hero-meta">
+          <div class="meta-block">
+            <span class="meta-label">Pages</span>
+            <span class="meta-val">10–12</span>
+          </div>
+          <div class="meta-block">
+            <span class="meta-label">Includes</span>
+            <span class="meta-val">PDF + Source ZIP</span>
+          </div>
+          <div class="meta-block">
+            <span class="meta-label">Target</span>
+            <span class="meta-val">STM32F411CEU6</span>
+          </div>
+          <div class="meta-block">
+            <span class="meta-label">Price</span>
+            <span class="meta-val accent-text">$17 USDT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-body">
+      <div class="container guide-layout">
+
+        <div class="guide-content">
+
+          <div class="content-block">
+            <h2>What you'll get</h2>
+            <p>
+              A step-by-step guide that takes you from blank project to working I2S audio pipeline
+              on STM32F411CEU6 with CS5343 (ADC) and CS4334 (DAC). Every section is grounded in
+              a real audio effects processor — the code in the ZIP actually ran on hardware.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>What's covered</h2>
+            <ul class="content-list">
+              <li>Hardware wiring — CS5343 and CS4334 pinout to STM32F411</li>
+              <li>CubeMX clock tree and I2S3 peripheral configuration</li>
+              <li>Double-buffer DMA setup for glitch-free audio</li>
+              <li>Audio engine architecture (audio_engine.h / .c)</li>
+              <li>Common pitfalls: MCLK routing, DMA aliasing, CMSIS sign convention</li>
+            </ul>
+          </div>
+
+          <div class="content-block">
+            <h2>Source code included</h2>
+            <div class="code-block">
+              <div class="code-header">// ZIP contents</div>
+              <pre>audio_engine.h
+audio_engine.c
+app.h
+app.c
+README.md</pre>
+            </div>
+            <p>Passthrough pipeline — compiles and runs on day one.</p>
+          </div>
+
+          <div class="content-block">
+            <h2>Who this is for</h2>
+            <p>
+              Embedded developers who have used STM32 before but haven't touched I2S or audio DMA.
+              You'll need basic CubeMX and HAL familiarity — the guide doesn't cover STM32 basics from scratch.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="guide-sidebar">
+          <div class="buy-box" id="buy">
+            <div class="buy-box-header">
+              <span class="buy-price">$17</span>
+              <span class="buy-currency">USDT · TRC20</span>
+            </div>
+
+            <div class="buy-includes">
+              <div class="buy-include-item">✓ PDF guide (10–12 pages)</div>
+              <div class="buy-include-item">✓ Source code ZIP</div>
+              <div class="buy-include-item">✓ Delivered to your email</div>
+            </div>
+
+            <div class="buy-steps">
+              <div class="buy-step">
+                <span class="step-num">1</span>
+                <span class="step-text">Send exactly <strong>17 USDT</strong> on TRC20 network to the address below</span>
+              </div>
+              <div class="buy-step">
+                <span class="step-num">2</span>
+                <span class="step-text">Fill in your email and transaction ID (txid)</span>
+              </div>
+              <div class="buy-step">
+                <span class="step-num">3</span>
+                <span class="step-text">Receive PDF + ZIP within a few hours</span>
+              </div>
+            </div>
+
+            <div class="wallet-block">
+              <div class="wallet-label">USDT TRC20 address</div>
+              <div class="wallet-address" id="walletAddr">YOUR_USDT_TRC20_ADDRESS_HERE</div>
+              <button class="copy-btn" onclick="copyAddress()">Copy address</button>
+              <div class="wallet-warning">⚠ TRC20 network only. Do not send on ERC20 or BEP20.</div>
+            </div>
+
+            <form class="purchase-form" onsubmit="submitOrder(event)">
+              <div class="form-group">
+                <label for="email">Your email</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="txid">Transaction ID (txid)</label>
+                <input type="text" id="txid" placeholder="Paste your txid here" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit order</button>
+            </form>
+
+            <div class="success-msg" id="successMsg" style="display:none">
+              ✓ Received. You'll get the files at your email within a few hours.
+            </div>
+
+            <p class="buy-note">
+              Questions? <a href="mailto:YOUR_EMAIL_HERE">Contact directly</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">[embedlab.dev]</span>
+        <span class="footer-copy">Embedded systems guides & consulting · Remote worldwide</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/guide.js"></script>
+</body>
+</html>

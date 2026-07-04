@@ -1,0 +1,287 @@
+/* ─── Guide hero ─── */
+.guide-hero {
+  padding: 56px 0 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.guide-breadcrumb {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-3);
+  margin-bottom: 20px;
+}
+
+.guide-breadcrumb a { color: var(--text-3); }
+.guide-breadcrumb a:hover { color: var(--teal); }
+.guide-breadcrumb span { margin: 0 6px; color: var(--border-2); }
+
+.guide-tag-large {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--teal);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.guide-hero-title {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.guide-hero-sub {
+  font-size: 16px;
+  color: var(--text-2);
+  max-width: 580px;
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+.guide-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.meta-block .meta-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.meta-block .meta-val {
+  font-size: 14px;
+  color: var(--text-1);
+  font-weight: 500;
+}
+
+.accent-text { color: var(--teal); }
+
+/* ─── Guide layout ─── */
+.guide-body { padding: 56px 0 80px; }
+
+.guide-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ─── Guide content ─── */
+.guide-content .content-block { margin-bottom: 44px; }
+
+.guide-content .content-block h2 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.guide-content .content-block p {
+  color: var(--text-2);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ─── Buy box ─── */
+.guide-sidebar { position: sticky; top: 72px; }
+
+.buy-box {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.buy-box-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.buy-price {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.buy-currency {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.buy-includes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.buy-include-item {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.buy-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.buy-step {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+.step-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--teal-dim);
+  color: var(--teal);
+  font-family: var(--mono);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── Wallet block ─── */
+.wallet-block {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+.wallet-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 8px;
+}
+
+.wallet-address {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--teal);
+  word-break: break-all;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.copy-btn {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-2);
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: border-color .15s;
+  margin-bottom: 10px;
+}
+
+.copy-btn:hover { border-color: var(--teal-dim); color: var(--teal); }
+
+.wallet-warning {
+  font-size: 12px;
+  color: #E09A3A;
+  line-height: 1.4;
+}
+
+/* ─── Purchase form ─── */
+.purchase-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 12px;
+  color: var(--text-3);
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.form-group input {
+  background: var(--bg-3);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 9px 12px;
+  font-size: 14px;
+  color: var(--text-1);
+  font-family: var(--sans);
+  outline: none;
+  transition: border-color .15s;
+}
+
+.form-group input:focus { border-color: var(--teal-dim); }
+.form-group input::placeholder { color: var(--text-3); }
+
+.success-msg {
+  background: rgba(43,191,170,.1);
+  border: 1px solid var(--teal-dim);
+  border-radius: var(--radius);
+  padding: 12px;
+  font-size: 13px;
+  color: var(--teal);
+  text-align: center;
+}
+
+.buy-note {
+  font-size: 12px;
+  color: var(--text-3);
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 800px) {
+  .guide-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-sidebar {
+    position: static;
+    order: -1;
+  }
+}
