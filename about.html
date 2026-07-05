@@ -1,153 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — embedlab.dev</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="/" class="logo">
-          <span class="logo-bracket">[</span>embedlab<span class="logo-dot">.</span>dev<span class="logo-bracket">]</span>
-        </a>
-        <nav class="header-nav">
-          <a href="/#guides">Guides</a>
-          <a href="about.html" class="nav-active">About</a>
-          <a href="#consulting" class="nav-cta">Consulting</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="about-hero">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — embedlab.dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
       <div class="container">
-        <span class="section-eyebrow">// about</span>
-        <h1 class="page-title">Embedded engineer.<br>End-to-end.</h1>
-        <p class="page-sub">
-          From schematic and PCB design to firmware development and real-time UI —
-          building systems that run reliably in the field, not just on the bench.
-        </p>
+        <div class="header-inner">
+          <a href="/" class="logo">
+            <span class="logo-bracket">[</span>embedlab<span class="logo-dot"
+              >.</span
+            >dev<span class="logo-bracket">]</span>
+          </a>
+          <nav class="header-nav">
+            <a href="/#guides">Guides</a>
+            <a href="about.html" class="nav-active">About</a>
+            <a href="#consulting" class="nav-cta">Consulting</a>
+          </nav>
+        </div>
       </div>
-    </section>
+    </header>
 
-    <section class="about-body">
-      <div class="container about-layout">
+    <main>
+      <section class="about-hero">
+        <div class="container">
+          <span class="section-eyebrow">// about</span>
+          <h1 class="page-title">Embedded engineer.<br />End-to-end.</h1>
+          <p class="page-sub">
+            From schematic and PCB design to firmware development and real-time
+            UI — building systems that run reliably in the field, not just on
+            the bench.
+          </p>
+        </div>
+      </section>
 
-        <div class="about-content">
-          <div class="content-block">
-            <h2>Background</h2>
-            <p>
-              I'm a freelance embedded systems engineer working across medical devices,
-              industrial automation, and IoT. My work spans the full stack — hardware design,
-              firmware, RTOS integration, and real-time UI.
-            </p>
-            <p>
-              The guides on this site come directly from completed projects. No hypothetical
-              implementations — every code example ran on real hardware before it became a guide.
-            </p>
-          </div>
+      <section class="about-body">
+        <div class="container about-layout">
+          <div class="about-content">
+            <div class="content-block">
+              <h2>Background</h2>
+              <p>
+                I'm a freelance embedded systems engineer working across medical
+                devices, industrial automation, and IoT. My work spans the full
+                stack — hardware design, firmware, RTOS integration, and
+                real-time UI.
+              </p>
+              <p>
+                The guides on this site come directly from completed projects.
+                No hypothetical implementations — every code example ran on real
+                hardware before it became a guide.
+              </p>
+            </div>
 
-          <div class="content-block">
-            <h2>Selected projects</h2>
-            <div class="project-list">
-              <div class="project-item">
-                <div class="project-domain">Medical</div>
-                <div class="project-desc">CPAP/NPCAP respiratory monitor — real-time signal processing, waveform rendering, vital signs display on STM32H7 + TouchGFX</div>
+            <div class="content-block">
+              <h2>Selected projects</h2>
+              <div class="project-list">
+                <div class="project-item">
+                  <div class="project-domain">Medical</div>
+                  <div class="project-desc">
+                    CPAP/NPCAP respiratory monitor — real-time signal
+                    processing, waveform rendering, vital signs display on
+                    STM32H7 + TouchGFX
+                  </div>
+                </div>
+                <div class="project-item">
+                  <div class="project-domain">Medical</div>
+                  <div class="project-desc">
+                    Dental laser and light-cure devices — precise power control,
+                    safety interlocks, embedded HMI
+                  </div>
+                </div>
+                <div class="project-item">
+                  <div class="project-domain">Industrial</div>
+                  <div class="project-desc">
+                    LoRa-based smart irrigation network — 3km range, 200+
+                    solenoid valve nodes, solar-powered edge controllers, PLC
+                    integration
+                  </div>
+                </div>
+                <div class="project-item">
+                  <div class="project-domain">Audio</div>
+                  <div class="project-desc">
+                    Real-time audio effects processor — EQ, echo, reverb,
+                    adaptive feedback suppression on STM32F411 with CMSIS-DSP
+                  </div>
+                </div>
+                <div class="project-item">
+                  <div class="project-domain">Industrial</div>
+                  <div class="project-desc">
+                    Conference system — multi-node token-ring audio routing,
+                    currently in commercial production
+                  </div>
+                </div>
               </div>
-              <div class="project-item">
-                <div class="project-domain">Medical</div>
-                <div class="project-desc">Dental laser and light-cure devices — precise power control, safety interlocks, embedded HMI</div>
-              </div>
-              <div class="project-item">
-                <div class="project-domain">Industrial</div>
-                <div class="project-desc">LoRa-based smart irrigation network — 3km range, 200+ solenoid valve nodes, solar-powered edge controllers, PLC integration</div>
-              </div>
-              <div class="project-item">
-                <div class="project-domain">Audio</div>
-                <div class="project-desc">Real-time audio effects processor — EQ, echo, reverb, adaptive feedback suppression on STM32F411 with CMSIS-DSP</div>
-              </div>
-              <div class="project-item">
-                <div class="project-domain">Industrial</div>
-                <div class="project-desc">Conference system — multi-node token-ring audio routing, currently in commercial production</div>
+            </div>
+
+            <div class="content-block">
+              <h2>Stack</h2>
+              <div class="stack-grid">
+                <div class="stack-item">
+                  <span class="stack-label">MCU</span>STM32 (F4, H7) · AVR
+                  (ATmega)
+                </div>
+                <div class="stack-item">
+                  <span class="stack-label">RTOS</span>RT-Thread · FreeRTOS
+                </div>
+                <div class="stack-item">
+                  <span class="stack-label">UI</span>TouchGFX · LVGL
+                </div>
+                <div class="stack-item">
+                  <span class="stack-label">Wireless</span>LoRa/LoRaWAN · GSM ·
+                  Ethernet
+                </div>
+                <div class="stack-item">
+                  <span class="stack-label">Protocols</span>Modbus RTU ·
+                  UART/SPI/I2C/I2S · CAN
+                </div>
+                <div class="stack-item">
+                  <span class="stack-label">Hardware</span>Full PCB & schematic
+                  design
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="content-block">
-            <h2>Stack</h2>
-            <div class="stack-grid">
-              <div class="stack-item"><span class="stack-label">MCU</span>STM32 (F4, H7) · AVR (ATmega)</div>
-              <div class="stack-item"><span class="stack-label">RTOS</span>RT-Thread · FreeRTOS</div>
-              <div class="stack-item"><span class="stack-label">UI</span>TouchGFX · LVGL</div>
-              <div class="stack-item"><span class="stack-label">Wireless</span>LoRa/LoRaWAN · GSM · Ethernet</div>
-              <div class="stack-item"><span class="stack-label">Protocols</span>Modbus RTU · UART/SPI/I2C/I2S · CAN</div>
-              <div class="stack-item"><span class="stack-label">Hardware</span>Full PCB & schematic design</div>
+      <section class="consulting-section" id="consulting">
+        <div class="container">
+          <span class="section-eyebrow">// work with me</span>
+          <h2 class="section-title">Consulting & Project Work</h2>
+          <p class="section-sub">
+            Available for consulting engagements and full project delivery —
+            remote worldwide. For larger scopes requiring power electronics,
+            FPGA, or advanced PCB expertise, I work with a trusted specialist
+            network and can manage the full scope.
+          </p>
+
+          <div class="service-grid">
+            <div class="service-card">
+              <div class="service-icon">{ }</div>
+              <h3>Architecture review</h3>
+              <p>
+                Hardware selection, firmware architecture, RTOS design — before
+                you start building.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">→</div>
+              <h3>Full project delivery</h3>
+              <p>
+                From schematic to working firmware. Medical, industrial, IoT,
+                audio.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">⌘</div>
+              <h3>Consulting & debug</h3>
+              <p>
+                Stuck on a specific problem? Hourly consulting on firmware,
+                peripherals, RTOS, DSP.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <h3>Get in touch</h3>
+            <p>
+              Describe your project briefly and I'll respond within 24 hours.
+            </p>
+            <div class="contact-links">
+              <a
+                href="https://linkedin.com/in/embedlabdev"
+                class="contact-link"
+                target="_blank"
+                >LinkedIn →</a
+              >
+              <a href="mailto:embedlab.dev@gmail.com" class="contact-link"
+                >Email →</a
+              >
             </div>
           </div>
         </div>
+      </section>
+    </main>
 
-      </div>
-    </section>
-
-    <section class="consulting-section" id="consulting">
+    <footer class="site-footer">
       <div class="container">
-        <span class="section-eyebrow">// work with me</span>
-        <h2 class="section-title">Consulting & Project Work</h2>
-        <p class="section-sub">
-          Available for consulting engagements and full project delivery — remote worldwide.
-          For larger scopes requiring power electronics, FPGA, or advanced PCB expertise,
-          I work with a trusted specialist network and can manage the full scope.
-        </p>
-
-        <div class="service-grid">
-          <div class="service-card">
-            <div class="service-icon">{ }</div>
-            <h3>Architecture review</h3>
-            <p>Hardware selection, firmware architecture, RTOS design — before you start building.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">→</div>
-            <h3>Full project delivery</h3>
-            <p>From schematic to working firmware. Medical, industrial, IoT, audio.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">⌘</div>
-            <h3>Consulting & debug</h3>
-            <p>Stuck on a specific problem? Hourly consulting on firmware, peripherals, RTOS, DSP.</p>
-          </div>
+        <div class="footer-inner">
+          <span class="footer-logo">[embedlab.dev]</span>
+          <span class="footer-copy"
+            >Embedded systems guides & consulting · Remote worldwide</span
+          >
         </div>
-
-        <div class="contact-block">
-          <h3>Get in touch</h3>
-          <p>Describe your project briefly and I'll respond within 24 hours.</p>
-          <div class="contact-links">
-            <a href="https://linkedin.com/in/YOUR_LINKEDIN" class="contact-link" target="_blank">LinkedIn →</a>
-            <a href="mailto:YOUR_EMAIL_HERE" class="contact-link">Email →</a>
-          </div>
-        </div>
-
       </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-logo">[embedlab.dev]</span>
-        <span class="footer-copy">Embedded systems guides & consulting · Remote worldwide</span>
-      </div>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
