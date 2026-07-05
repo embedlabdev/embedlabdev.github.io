@@ -545,6 +545,55 @@ a:hover { color: var(--text-1); }
   color: var(--teal);
 }
 
+.email-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.email-toggle {
+  font-family: var(--sans);
+  cursor: pointer;
+}
+
+.email-reveal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+}
+
+.email-text {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--teal);
+}
+
+.email-copy-btn {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-2);
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+
+.email-copy-btn:hover { border-color: var(--teal-dim); color: var(--teal); }
+
+.email-open-btn {
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.email-open-btn:hover { color: var(--teal); }
+
 /* ─── Footer ─── */
 .site-footer {
   border-top: 1px solid var(--border);

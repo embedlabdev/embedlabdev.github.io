@@ -284,6 +284,35 @@
   text-align: center;
 }
 
+.email-toggle-inline {
+  background: none;
+  border: none;
+  color: var(--teal);
+  font-size: 12px;
+  font-family: var(--sans);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.email-toggle-inline:hover { color: var(--text-1); }
+
+.email-reveal-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.email-reveal-inline .email-text {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--teal);
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 800px) {
   .guide-layout {

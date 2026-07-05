@@ -1,3 +1,18 @@
+function toggleGuideEmail() {
+  const el = document.getElementById('guideEmailReveal');
+  el.style.display = el.style.display === 'none' ? 'inline-flex' : 'none';
+}
+
+function copyGuideEmail() {
+  const email = document.getElementById('guideEmailText').textContent.trim();
+  navigator.clipboard.writeText(email).then(() => {
+    const btn = document.querySelectorAll('.email-copy-btn')[document.querySelectorAll('.email-copy-btn').length - 1];
+    const original = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => { btn.textContent = original; }, 2000);
+  });
+}
+
 function copyAddress() {
   const addr = document.getElementById('walletAddr').textContent.trim();
   navigator.clipboard.writeText(addr).then(() => {

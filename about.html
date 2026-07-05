@@ -131,7 +131,14 @@
           <p>Describe your project briefly and I'll respond within 24 hours.</p>
           <div class="contact-links">
             <a href="https://linkedin.com/in/YOUR_LINKEDIN" class="contact-link" target="_blank">LinkedIn →</a>
-            <a href="mailto:YOUR_EMAIL_HERE" class="contact-link">Email →</a>
+            <div class="email-contact">
+              <button class="contact-link email-toggle" onclick="toggleEmail()">Email →</button>
+              <div class="email-reveal" id="emailReveal" style="display:none">
+                <span class="email-text" id="emailText">YOUR_EMAIL_HERE</span>
+                <button class="email-copy-btn" onclick="copyEmail()">Copy</button>
+                <a class="email-open-btn" href="mailto:YOUR_EMAIL_HERE">Open in email app →</a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -148,6 +155,22 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function toggleEmail() {
+      const el = document.getElementById('emailReveal');
+      el.style.display = el.style.display === 'none' ? 'flex' : 'none';
+    }
+    function copyEmail() {
+      const email = document.getElementById('emailText').textContent.trim();
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.querySelector('.email-copy-btn');
+        const original = btn.textContent;
+        btn.textContent = 'Copied ✓';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      });
+    }
+  </script>
 
 </body>
 </html>

@@ -167,7 +167,12 @@ README.md</pre>
             </div>
 
             <p class="buy-note">
-              Questions? <a href="mailto:YOUR_EMAIL_HERE">Contact directly</a>
+              Questions?
+              <button class="email-toggle-inline" onclick="toggleGuideEmail()">Contact directly</button>
+              <span class="email-reveal-inline" id="guideEmailReveal" style="display:none">
+                <span class="email-text" id="guideEmailText">YOUR_EMAIL_HERE</span>
+                <button class="email-copy-btn" onclick="copyGuideEmail()">Copy</button>
+              </span>
             </p>
           </div>
         </div>
