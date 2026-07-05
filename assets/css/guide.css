@@ -274,6 +274,16 @@
   margin-top: 12px;
 }
 
+.error-msg {
+  background: rgba(224,154,58,.1);
+  border: 1px solid #E09A3A;
+  border-radius: var(--radius);
+  padding: 12px;
+  font-size: 13px;
+  color: #E09A3A;
+  text-align: center;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 800px) {
   .guide-layout {

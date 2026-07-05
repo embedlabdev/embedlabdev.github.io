@@ -12,23 +12,39 @@ function copyAddress() {
   });
 }
 
-function submitOrder(e) {
+async function submitOrder(e) {
   e.preventDefault();
+
+  const form = document.getElementById('orderForm');
+  const btn  = document.getElementById('submitBtn');
   const email = document.getElementById('email').value.trim();
   const txid  = document.getElementById('txid').value.trim();
 
   if (!email || !txid) return;
 
-  // Build mailto link — opens user's email client
-  // Replace YOUR_EMAIL_HERE with your real email in the HTML
-  const to      = document.querySelector('.buy-note a').getAttribute('href').replace('mailto:', '');
-  const subject = encodeURIComponent('STM32 I2S Quickstart — Order');
-  const body    = encodeURIComponent(
-    `Hi,\n\nI just purchased the STM32 I2S Quickstart guide.\n\nEmail: ${email}\nTxID: ${txid}\n\nPlease send the files. Thanks!`
-  );
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
 
-  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  const formData = new FormData(form);
 
-  document.querySelector('.purchase-form').style.display = 'none';
-  document.getElementById('successMsg').style.display = 'block';
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      form.style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    } else {
+      throw new Error(result.message || 'Submission failed');
+    }
+  } catch (err) {
+    document.getElementById('errorMsg').style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Submit order';
+  }
 }
